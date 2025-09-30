@@ -1,0 +1,34 @@
+name: env
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # --- Core Dependency ---
+  - python=3.11
+
+  # --- Standard Data Science & Modeling Libraries ---
+  - numpy
+  - pandas
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - scipy
+  - statsmodels
+  - joblib
+  - imbalanced-learn
+  
+  # --- Advanced Modeling & Tuning ---
+  - xgboost
+  - lightgbm
+  - shap
+  - optuna
+  - mlflow
+
+  # --- Notebook and Utilities ---
+  - ipykernel
+  - notebook
+  - jupyterlab
+  - pip
+
