@@ -4,6 +4,7 @@
     "python-envs.pythonProjects": [],
     "workbench.editorAssociations": {
         "*.copilotmd": "vscode.markdown.preview.editor",
-        "file:/**/*.parquet": "jupyter-data-wrangler"
+        "file:/**/*.parquet": "jupyter-data-wrangler",
+        "*.pkl": "default"
     }
 }
