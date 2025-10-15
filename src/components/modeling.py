@@ -136,7 +136,7 @@ class DataTransformation:
 
 if __name__ == "__main__":
     # This allows standalone testing of data transformation
-    from src.components.data_ingestion import DataIngestion
+    from src.components.data_handler import DataIngestion
     
     logging.info("--- Starting Data Transformation standalone test ---")
     

@@ -1,0 +1,46 @@
+name: heart-disease-prediction
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  # ========================
+  # CORE PYTHON & DATA STACK
+  # ========================
+  - python=3.11.13
+  - pip
+  - pandas
+  - numpy
+  - pyarrow
+  - joblib
+
+  # ========================
+  # MACHINE LEARNING (via pip for CPU control)
+  # ========================
+  - scikit-learn
+  - optuna
+  - imbalanced-learn
+
+  # ========================
+  # VISUALIZATION
+  # ========================
+  - matplotlib
+  - seaborn
+  - shap
+
+  # ========================
+  # UTILITIES
+  # ========================
+  - tqdm
+  - ipykernel
+  - jupyterlab
+  - ipywidgets
+  - ipython
+
+  # ========================
+  # PIP PACKAGES (CPU ONLY)
+  # ========================
+  - pip:
+    - xgboost
+    - lightgbm
