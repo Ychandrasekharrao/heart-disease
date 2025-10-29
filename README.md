@@ -1,3 +1,2 @@
 # Heart Disease Prediction Project
-
-This project provides an end-to-end machine learning workflow for predicting heart disease risk using clinical and lifestyle data. It includes data exploration, preprocessing, model training (with algorithms like LightGBM and XGBoost), and thorough evaluation. The project also emphasizes responsible AI practices by incorporating power analysis for sample size estimation and launching an interactive Responsible AI Dashboard for error and fairness analysis. All code, data, and results are organized for reproducibility and transparency, supporting both research and practical applications in healthcare analytics.
+This repository contains code and resources for predicting heart disease using machine learning techniques. The project aims to analyze various health parameters and provide insights into the likelihood of heart disease in individuals.
