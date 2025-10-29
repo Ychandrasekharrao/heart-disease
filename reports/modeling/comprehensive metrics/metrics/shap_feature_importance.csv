@@ -1,0 +1,15 @@
+feature,mean_abs_shap
+Age_SystolicBP,0.48808953
+BMI_MetabolicVascularLoad,0.34095743
+MAP_Group_encoded,0.23851874
+Age_HemodynamicLoad_Chol,0.16032478
+Age_Group_encoded,0.1007148
+BP_Group_encoded,0.10011504
+Glucose_Level_encoded,0.08399122
+Physical_Activity_encoded,0.061929036
+Cholesterol_Level_encoded,0.053491212
+PP_Group_encoded,0.050101485
+BMI_Group_encoded,0.037261806
+Sex_encoded,0.026707062
+Smoking_Status_encoded,0.02061084
+Alcohol_Intake_encoded,0.010624953

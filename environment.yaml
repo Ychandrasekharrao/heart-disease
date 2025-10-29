@@ -1,46 +1,32 @@
-name: heart-disease-prediction
-
+name: env
 channels:
   - conda-forge
   - defaults
 
 dependencies:
-  # ========================
-  # CORE PYTHON & DATA STACK
-  # ========================
-  - python=3.11.13
+  - python=3.10
   - pip
   - pandas
-  - numpy
+  - scikit-learn
   - pyarrow
   - joblib
-
-  # ========================
-  # MACHINE LEARNING (via pip for CPU control)
-  # ========================
-  - scikit-learn
+  - lightgbm
+  - catboost
   - optuna
   - imbalanced-learn
-
-  # ========================
-  # VISUALIZATION
-  # ========================
+  - xgboost
   - matplotlib
   - seaborn
-  - shap
-
-  # ========================
-  # UTILITIES
-  # ========================
-  - tqdm
-  - ipykernel
   - jupyterlab
-  - ipywidgets
-  - ipython
-
-  # ========================
-  # PIP PACKAGES (CPU ONLY)
-  # ========================
+  - ipykernel>=6.29
+  - ipython>=8.18
+  - tqdm>=4.66
+  - llvmlite  # Install via conda to avoid distutils issue
+  - numba     # Usually depends on llvmlite
   - pip:
-    - xgboost
-    - lightgbm
+      - numpy==1.23.5
+      - scipy==1.11.4
+      - tensorflow==2.12.0
+      - shap>=0.45
+      - raiwidgets==0.31.0
+      - responsibleai==0.31.0

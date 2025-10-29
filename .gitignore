@@ -136,6 +136,7 @@ celerybeat.pid
 
 # Environments
 artifacts
+heart_env/
 .env
 .envrc
 .venv
@@ -144,6 +145,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+.rai_env/
 
 # Spyder project settings
 .spyderproject
