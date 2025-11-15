@@ -1,0 +1,68 @@
+{
+  "model_info": {
+    "type": "CatBoost",
+    "calibration": "beta",
+    "threshold": 0.3818019242672164
+  },
+  "data_split": {
+    "train_pct": 69.99971418772151,
+    "cal_pct": 14.999428375443008,
+    "test_pct": 15.000857436835485,
+    "train_n": 48983,
+    "cal_n": 10496,
+    "test_n": 10497
+  },
+  "test_performance": {
+    "auc": 0.8015946602186697,
+    "auc_ci": [
+      0.7929747528105979,
+      0.809775083864986
+    ],
+    "brier": 0.18058047062243304,
+    "brier_ci": [
+      0.17675750120439904,
+      0.18452833727402745
+    ],
+    "avg_precision": 0.7862255143282131,
+    "f1": 0.7432040116125627,
+    "accuracy": 0.7219205487282081,
+    "balanced_accuracy": 0.7219601908697311
+  },
+  "diagnostic": {
+    "sensitivity": 0.8051849027830729,
+    "specificity": 0.6387354789563893,
+    "ppv": 0.6900833197190002,
+    "npv": 0.7664533820840951,
+    "fnr": 0.1948150972169272,
+    "fpr": 0.36126452104361073
+  },
+  "confusion_matrix": {
+    "tn": 3354,
+    "fp": 1897,
+    "fn": 1022,
+    "tp": 4224
+  },
+  "risk_stratification": {
+    "Low": {
+      "n": 3212,
+      "percentage": 30.59921882442603,
+      "disease_prevalence": 18.960149439601494,
+      "mean_risk_score": 0.19746456315317493,
+      "clinical_action": "Reassure"
+    },
+    "Moderate": {
+      "n": 2839,
+      "percentage": 27.04582261598552,
+      "disease_prevalence": 41.5639309616062,
+      "mean_risk_score": 0.4123231632413428,
+      "clinical_action": "Intervention"
+    },
+    "High": {
+      "n": 4446,
+      "percentage": 42.354958559588454,
+      "disease_prevalence": 77.75528565002249,
+      "mean_risk_score": 0.7749139154104033,
+      "clinical_action": "Intervention"
+    }
+  }
+}

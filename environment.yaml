@@ -4,23 +4,36 @@ channels:
   - defaults
 
 dependencies:
-  - python=3.10.13
-  - pip=23.3.1
-  - pandas=2.1.4
-  - scikit-learn=1.3.2
-  - pyarrow=14.0.1
-  - joblib=1.3.2
-  - lightgbm=4.1.0
-  - catboost=1.2.2
-  - optuna=3.5.0
-  - imbalanced-learn=0.11.0
-  - xgboost=2.0.3
-  - matplotlib=3.8.2
-  - seaborn=0.13.0
-  - jupyterlab=4.0.9
-  - numpy=1.23.5
-  - scipy=1.11.4
-  - shap=0.45.0
+  # Core Python
+  - python=3.10
+  - pip
+  
+  # Data & ML Core
+  - pandas
+  - numpy
+  - scikit-learn
+  - scipy
+  - joblib
+  - pyarrow
+  - imbalanced-learn
+  
+  # Machine Learning Models
+  - xgboost  # GPU-enabled by default
+  - lightgbm  # CPU version (GPU requires special build)
+  - catboost  # CPU version (GPU requires catboost-gpu)
+  
+  # Hyperparameter Optimization
+  - optuna
+  
+  # Visualization
+  - matplotlib
+  - seaborn
+  - shap
+  
+  # Development
+  - jupyterlab
+  - tqdm
+  
+  # Pip installations
   - pip:
-      - raiwidgets==0.31.0
-      - responsibleai==0.31.0
+      - betacal  # Beta calibration for healthcare ML

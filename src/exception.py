@@ -1,23 +1,61 @@
-import sys
-from src.logger import logging
+"""
+Custom Exception Handler for Heart Disease Prediction
+Provides detailed error tracking and logging
+"""
 
-def error_message_detail(error, error_detail):
+import sys
+from typing import Optional
+
+def error_message_detail(error: Exception, error_detail: sys) -> str:
+    """
+    Generate detailed error message with file, line number, and message.
+    
+    Args:
+        error: Exception instance
+        error_detail: sys module for extracting traceback
+    
+    Returns:
+        Formatted error message string
+    """
     _, _, exc_tb = error_detail.exc_info()
+    
     if exc_tb is not None:
         file_name = exc_tb.tb_frame.f_code.co_filename
-        line_no = exc_tb.tb_lineno
+        line_number = exc_tb.tb_lineno
+        error_message = (
+            f"Error in [{file_name}] "
+            f"line [{line_number}]: "
+            f"{str(error)}"
+        )
     else:
-        file_name = "Unknown"
-        line_no = "Unknown"
-    error_message = "Error occurred in python script [{0}] at line [{1}] with message: {2}".format(
-        file_name, line_no, str(error)
-    )
+        error_message = f"Error: {str(error)}"
+    
     return error_message
 
-class CustomException(Exception):
-    def __init__(self, error, error_detail):
-        super().__init__(str(error))
-        self.error_message = error_message_detail(error, error_detail)
 
-    def __str__(self):
+class CustomException(Exception):
+    """
+    Custom exception class with enhanced error reporting.
+    """
+    
+    def __init__(self, error_message: str, error_detail: Optional[Exception] = None):
+        """
+        Initialize custom exception.
+        
+        Args:
+            error_message: Error message
+            error_detail: Original exception (optional)
+        """
+        super().__init__(error_message)
+        
+        # FIX: Use sys module, not the exception object
+        if error_detail is not None:
+            self.error_message = error_message_detail(error_detail, sys)
+        else:
+            self.error_message = error_message
+        
+        self.original_error = error_detail
+    
+    def __str__(self) -> str:
+        """Return string representation of the exception."""
         return self.error_message

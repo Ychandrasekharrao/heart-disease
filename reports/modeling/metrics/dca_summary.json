@@ -1,0 +1,16 @@
+{
+  "model_type": "CatBoost",
+  "calibration_method": "beta",
+  "threshold": 0.3818019242672164,
+  "data_split": {
+    "train_pct": 70.0,
+    "cal_pct": 15.0,
+    "test_pct": 15.0,
+    "n_test": 10497
+  },
+  "prevalence": 0.499761836715252,
+  "net_benefit_at_threshold": 0.2921172562360367,
+  "net_benefit_treat_all": 0.499761836715252,
+  "improvement": -0.2076445804792153,
+  "is_useful": false
+}
