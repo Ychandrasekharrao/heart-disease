@@ -33,7 +33,7 @@ class HeartDiseasePredictPipeline:
             'Sex', 'Systolic_BP', 'Diastolic_BP', 'Cholesterol_Level',
             'Glucose_Level', 'Smoking_Status', 'Alcohol_Intake', 'Physical_Activity',
             'Age_Years', 'BMI', 'Systolic_Age_risk', 'Diastolic_Age_risk',
-            'Metabolic_Syndrome_Score', 'Low_Risk_Paradox_Score'
+            'Cardiometabolic_Risk_Index', 'Low_Risk_Paradox_Score'
         ]
         
         self.base_model = None
